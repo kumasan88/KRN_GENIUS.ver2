@@ -1,0 +1,26 @@
+﻿@model Product
+@{
+    ViewData["Title"] = $"{ViewBag.Action} Product";
+}
+
+<div class="row">
+    <h1>@ViewBag.Action Product</h1>
+
+    <div class="col-12">
+        <form asp-action="Edit" method="POST">
+            <label asp-for="Code" class="form-label">Code</label>
+            <input asp-for="Code" type="text" class="form-control" value="@Model.Code"><br>
+            <label asp-for="Name" class="form-label">Name</label>
+            <input asp-for="Name" type="text" class="form-control" value="@Model.Name"><br>
+            <label asp-for="YearlyPrice" class="form-label">Yearly Price</label>
+            <input asp-for="YearlyPrice" type="number" class="form-control" value="@Model.YearlyPrice" step=".01"/><br>
+            <label asp-for="Date" class="form-label">Release Date</label>
+            <input asp-for="Date" type="datetime" class="form-control" value="@Model.Date"><br>
+
+            <input type="hidden" asp-for="ProductId"/>
+
+            <button type="submit" class="btn btn-primary">Save</button>
+            <a class="btn btn-primary" asp-action="List">Cancel</a>
+        </form>
+    </div>
+</div>

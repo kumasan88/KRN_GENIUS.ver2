@@ -1,0 +1,21 @@
+﻿@model Technician
+
+<div class="row">
+    <h1>@ViewBag.Action Product</h1>
+
+    <div class="col-12">
+        <form asp-action="Add" method="POST">
+            <label asp-for="Name" class="form-label">Name</label>
+            <input asp-for="Name" type="text" class="form-control" value="@Model.Name"><br>
+            <label asp-for="Email" class="form-label">Yearly Price</label>
+            <input asp-for="Email" type="number" class="form-control" value="@Model.Email" step=".01"/><br>
+            <label asp-for="Phone" class="form-label">Release Date</label>
+            <input asp-for="Phone" type="datetime" class="form-control" value="@Model.Phone"><br>
+
+            <input type="hidden" asp-for="TechnicianId"/>
+
+            <button type="submit" class="btn btn-primary">Save</button>
+            <a class="btn btn-primary" asp-action="List">Cancel</a>
+        </form>
+    </div>
+</div>

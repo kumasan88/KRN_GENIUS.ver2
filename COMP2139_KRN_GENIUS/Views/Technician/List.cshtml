@@ -1,0 +1,41 @@
+﻿@model List<Technician>
+@{
+    ViewData["Title"] = "Technicians";
+}
+
+<div class="row">
+    <h1>Technician Manager</h1>
+
+    <div class="col-12">
+        <table class="table table-bordered">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>
+            @foreach (var technician in Model)
+            {
+				<tr style="font-size:20px">
+					<td style="padding-top:15px; padding-bottom:15px">@technician.Name</td>
+					<td style="padding-top:15px; padding-bottom:15px">@technician.Email</td>
+					<td style="padding-top:15px; padding-bottom:15px">@technician.Phone</td>
+                    <td>
+<<<<<<< HEAD
+						<a asp-controller="Product" asp-action="Edit" asp-route-id="@technician.TechnicianId">Edit</a>
+						<a asp-controller="Product" asp-action="Delete" asp-route-id="@technician.TechnicianId">Delete</a>
+=======
+						<a class="btn btn-primary"style= "text-decoration:none; color:white" asp-controller="Product" asp-action="Edit" asp-route-id="@technician.TechnicianId">Edit</a>
+						<a class="btn btn-primary"style= "text-decoration:none; color:white" asp-controller="Product" asp-action="Delete" asp-route-id="@technician.TechnicianId">Delete</a>
+>>>>>>> 2909b4e3f0f71757067a18b93264121002c10910
+					</td>
+				</tr>
+            }
+            
+        </table>
+        <a class="btn btn-primary"style= "text-decoration:none; color:white" asp-area="" asp-controller="Technician" asp-action="Add">Add Technician</a>
+    </div>
+<<<<<<< HEAD
+</div>
+=======
+</div>
+>>>>>>> 2909b4e3f0f71757067a18b93264121002c10910

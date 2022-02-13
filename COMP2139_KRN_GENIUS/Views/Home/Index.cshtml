@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="row">
+    <h1>SportsPro Technical Support</h1>
+    <p>Sports managements software for the sports enthusiast</p>
+
+    <h1>Admin</h1>
+
+    <div class="col-12">
+        <table class="table table-bordered">
+            <tr style="font-size:20px">
+                <td style="padding-top:20px; padding-bottom:20px">
+                    <a style= "text-decoration:none" asp-area="" asp-controller="Product" asp-action="List">Manage Products</a>
+                </td>
+            </tr>
+            <tr style="font-size:20px">
+                <td style="padding-top:20px; padding-bottom:20px">
+                    <a style= "text-decoration:none" asp-area="" asp-controller="Technician" asp-action="List">Manage Technicians</a>
+                </td>
+            </tr>
+            <tr style="font-size:20px">
+                <td style="padding-top:20px; padding-bottom:20px">
+                    <a style= "text-decoration:none" asp-area="" asp-controller="Home" asp-action="Customers">Manage Customers</a>
+                </td>
+            </tr>
+            <tr style="font-size:20px">
+                <td style="padding-top:20px; padding-bottom:20px">
+                    <a style= "text-decoration:none" asp-area="" asp-controller="Home" asp-action="Incidents">Manage Incidents</a>
+                </td>
+            </tr>
+            <tr style="font-size:20px">
+                <td style="padding-top:20px; padding-bottom:20px">
+                    <a style= "text-decoration:none" asp-area="" asp-controller="Home" asp-action="Registrations">Manage Registrations</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <h1>Technicians</h1>
+    <div class="col-12">
+         <table class="table table-bordered">
+            <tr style="font-size:20px">
+                <td style="padding-top:20px; padding-bottom:20px">
+                    <a style= "text-decoration:none" asp-area="" asp-controller="Home" asp-action="UpdateIncident">Update Incident</a>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</div>
